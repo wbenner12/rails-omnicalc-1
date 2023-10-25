@@ -39,6 +39,14 @@ class GameController < ApplicationController
     render({ :template => "my_templates/payment_calc" })
   end
   
+  def new_random
+    render({ :template => "my_templates/new_random" })
+  end
+  def random_calc
+    @rand_min = params.fetch("min").to_f
+    @rand_max = params.fetch("max").to_f
 
-
+    @rand_result = rand(@rand_min..@rand_max)
+    render({ :template => "my_templates/random_calc" })
+  end
 end

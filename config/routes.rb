@@ -11,4 +11,7 @@ get("/square_root/results", { :controller => "game", :action => "square_root_cal
 get("/payment/new", { :controller => "game", :action => "new_payment"})
 get("/payment/results", { :controller => "game", :action => "payment_calc"})
 
+get("/random/new", { :controller => "game", :action => "new_random"})
+get("/random/results", { :controller => "game", :action => "random_calc"})
+
 end
